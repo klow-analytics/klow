@@ -1,5 +1,5 @@
-yapf
-pylint
+-r requirements.txt
 pytest
 pytest-cov
 coveralls
+pre-commit
