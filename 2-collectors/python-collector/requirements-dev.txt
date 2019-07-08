@@ -1,5 +1,6 @@
 -r requirements.txt
+pre-commit
+mypy
 pytest
 pytest-cov
 coveralls
-pre-commit

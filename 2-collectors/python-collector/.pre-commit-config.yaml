@@ -1,0 +1,25 @@
+repos:
+-   repo: https://github.com/ambv/black
+    rev: stable
+    hooks:
+    - id: black
+      language_version: python3.7
+-   repo: git://github.com/pre-commit/pre-commit-hooks
+    rev: v1.2.3
+    hooks:
+    - id: trailing-whitespace
+    - id: end-of-file-fixer
+    - id: check-ast
+    - id: flake8
+-   repo: https://github.com/pre-commit/mirrors-pylint
+    rev: 'v2.3.1'
+    hooks:
+    - id: pylint
+-   repo: local
+    hooks:
+      - id: mypy
+        name: Check mypy static types match
+        entry: pipenv run mypy python_starter --ignore-missing-imports
+        pass_filenames: false
+        language: system
+        types: [python]
