@@ -1,0 +1,49 @@
+[
+    {
+        "test_input": {
+            "general": {
+                "protocolVersion": "1"
+            }
+        },
+        "expected_output": [
+            {
+                "general": {
+                    "protocolVersion": "1"
+                }
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "customDimension": [
+                {
+                    "index": 1,
+                    "value": "hello"
+                }
+            ]
+        },
+        "expected_output": [
+            {
+                "customDimension": [
+                    {
+                        "index": 1,
+                        "value": "hello"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "customDimension": [
+                {
+                    "index": 1000,
+                    "value": "hello"
+                }
+            ]
+        },
+        "expected_output": [
+            {}
+        ]
+    }
+]

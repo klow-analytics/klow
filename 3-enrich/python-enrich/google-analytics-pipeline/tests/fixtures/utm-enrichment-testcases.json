@@ -1,0 +1,47 @@
+[
+    {
+        "test_input": {
+            "pageView": {
+                "documentLocationUrl": "https://rajeshhegde.com?utm_campaign=hello"
+            }
+        },
+        "expected_output": [
+            {
+                "pageView": {
+                    "documentLocationUrl": "https://rajeshhegde.com?utm_campaign=hello"
+                },
+                "trafficSource": {
+                    "campaignSource": null,
+                    "campaignMedium": null,
+                    "campaignKeyword": null,
+                    "campaignName": "hello",
+                    "campaignContent": null
+                }
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "pageView": {
+                "documentLocationUrl": "https://rajeshhegde.com?utm_campaign=hello"
+            },
+            "trafficSource": {
+                "campaignName": "world"
+            }
+        },
+        "expected_output": [
+            {
+                "pageView": {
+                    "documentLocationUrl": "https://rajeshhegde.com?utm_campaign=hello"
+                },
+                "trafficSource": {
+                    "campaignSource": null,
+                    "campaignMedium": null,
+                    "campaignKeyword": null,
+                    "campaignName": "world",
+                    "campaignContent": null
+                }
+            }
+        ]
+    }
+]

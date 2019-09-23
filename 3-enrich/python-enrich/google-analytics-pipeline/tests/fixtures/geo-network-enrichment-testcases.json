@@ -1,0 +1,60 @@
+[
+    {
+        "test_input": {
+            "header": {
+                "appEngineCountry": "IN",
+                "appEngineRegion": "KA",
+                "appEngineCity": "bangalore",
+                "appEngineCityLatLong": "12.871599,77.494563"
+            }
+        },
+        "expected_output": [
+            {
+                "header": {
+                    "appEngineCountry": "IN",
+                    "appEngineRegion": "KA",
+                    "appEngineCity": "bangalore",
+                    "appEngineCityLatLong": "12.871599,77.494563"
+                },
+                "geoNetwork": {
+                    "continent": "",
+                    "subContinent": "",
+                    "country": "IN",
+                    "metro": "",
+                    "region": "KA",
+                    "city": "bangalore",
+                    "latitude": "12.871599",
+                    "longitude": "77.494563"
+                }
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "header": {
+                "appEngineCountry": "IN",
+                "appEngineRegion": "KA",
+                "appEngineCity": "bangalore"
+            }
+        },
+        "expected_output": [
+            {
+                "header": {
+                    "appEngineCountry": "IN",
+                    "appEngineRegion": "KA",
+                    "appEngineCity": "bangalore"
+                },
+                "geoNetwork": {
+                    "continent": "",
+                    "subContinent": "",
+                    "country": "IN",
+                    "metro": "",
+                    "region": "KA",
+                    "city": "bangalore",
+                    "latitude": null,
+                    "longitude": null
+                }
+            }
+        ]
+    }
+]

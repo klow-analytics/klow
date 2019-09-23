@@ -1,0 +1,6 @@
+{
+    "schema_repo": "{project_root}/schemas",
+    "protocol_config": "{project_root}/configs/protocol-mapping.json",
+    "raw_event_model_schema": "com.google.analytics/raw_event_model/jsonschema/1-0-0",
+    "enriched_event_model_schema": "com.google.analytics/enriched_event_model/jsonschema/1-0-0"
+}

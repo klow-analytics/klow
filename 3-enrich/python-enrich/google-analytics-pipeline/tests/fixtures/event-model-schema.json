@@ -1,0 +1,1135 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "description": "Schema for Google Analytics event model",
+    "self": {
+        "version": "1-0-0",
+        "vendor": "com.google.analytics",
+        "name": "event_model",
+        "format": "jsonschema"
+    },
+    "type": "object",
+    "properties": {
+        "collector": {
+            "description": "Data collector schema",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.mlanalytix.collector",
+                "name": "collector",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "collectorTimestamp": {
+                    "type": "number"
+                },
+                "requestUrl": {
+                    "type": "string"
+                },
+                "networkUserId": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                }
+            }
+        },
+        "header": {
+            "description": "HTTP headers from the request",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.mlanalytix.collector",
+                "name": "header",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "userIpAddress": {
+                    "type": "string"
+                },
+                "userAgent": {
+                    "type": "string"
+                },
+                "appEngineCityLatLong": {
+                    "type": "string"
+                },
+                "appEngineRegion": {
+                    "type": "string"
+                },
+                "appEngineCity": {
+                    "type": "string"
+                },
+                "appEngineCountry": {
+                    "type": "string"
+                },
+                "referer": {
+                    "type": "string"
+                }
+            }
+        },
+        "cookies": {
+            "description": "Schema for a context of Google Analytics cookie values",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics",
+                "name": "cookies",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "__utmz": {
+                    "type": "string"
+                },
+                "_ga": {
+                    "type": "string"
+                },
+                "__utmv": {
+                    "type": "string"
+                },
+                "__utma": {
+                    "type": "string"
+                },
+                "__utmb": {
+                    "type": "string"
+                },
+                "__utmc": {
+                    "type": "string"
+                }
+            }
+        },
+        "productImpression": {
+            "description": "Schema for a Google Analytics enhanced e-commerce product impression entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "product_impression",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "sku": {
+                        "type": "string"
+                    },
+                    "category": {
+                        "type": "string"
+                    },
+                    "listIndex": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "brand": {
+                        "type": "string"
+                    },
+                    "productIndex": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "variant": {
+                        "type": "string"
+                    },
+                    "price": {
+                        "type": "number"
+                    },
+                    "position": {
+                        "type": "integer"
+                    },
+                    "currencyCode": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "app": {
+            "description": "Schema for a Google Analytics app entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "app",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "version": {
+                    "type": "string",
+                    "maxlength": 100
+                },
+                "installerId": {
+                    "type": "string",
+                    "maxlength": 150
+                },
+                "name": {
+                    "type": "string",
+                    "maxlength": 100
+                },
+                "id": {
+                    "type": "string",
+                    "maxlength": 150
+                }
+            }
+        },
+        "private": {
+            "description": "Schema for a Google Analytics private entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics",
+                "name": "private",
+                "format": "jsonschema"
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "properties": {
+                "gid": {
+                    "type": "string",
+                    "maxlength": 256
+                },
+                "s": {
+                    "type": "integer"
+                },
+                "r": {
+                    "type": "integer"
+                },
+                "u": {
+                    "type": "string",
+                    "maxlength": 256
+                },
+                "v": {
+                    "type": "string",
+                    "maxlength": 256
+                }
+            }
+        },
+        "general": {
+            "description": "Schema for a Google Analytics general entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "general",
+                "format": "jsonschema"
+            },
+            "required": [
+                "protocolVersion",
+                "trackingId"
+            ],
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "trackingId": {
+                    "type": "string"
+                },
+                "cacheBuster": {
+                    "type": "string"
+                },
+                "queueTime": {
+                    "type": "integer"
+                },
+                "dataSource": {
+                    "type": "string"
+                },
+                "anonymizeIp": {
+                    "type": "boolean"
+                },
+                "protocolVersion": {
+                    "type": "string"
+                }
+            }
+        },
+        "timing": {
+            "description": "Schema for a Google Analytics timing hit",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "timing",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "userTimingLabel": {
+                    "type": "string",
+                    "maxlength": 500
+                },
+                "userTimingCategory": {
+                    "type": "string",
+                    "maxlength": 150
+                },
+                "tcpConnectTime": {
+                    "type": "integer"
+                },
+                "pageDownloadTime": {
+                    "type": "integer"
+                },
+                "userTimingVariableName": {
+                    "type": "string",
+                    "maxlength": 500
+                },
+                "dnsTime": {
+                    "type": "integer"
+                },
+                "domInteractiveTime": {
+                    "type": "integer"
+                },
+                "redirectResponseTime": {
+                    "type": "integer"
+                },
+                "serverResponseTime": {
+                    "type": "integer"
+                },
+                "userTimingTime": {
+                    "type": "integer"
+                },
+                "pageLoadTime": {
+                    "type": "integer"
+                },
+                "contentLoadTime": {
+                    "type": "integer"
+                }
+            }
+        },
+        "session": {
+            "description": "Schema for a Google Analytics session entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "session",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "ipOverride": {
+                    "type": "string"
+                },
+                "sessionControl": {
+                    "type": "string"
+                },
+                "geographicalOverride": {
+                    "type": "string"
+                },
+                "userAgentOverride": {
+                    "type": "string"
+                }
+            }
+        },
+        "productImpressionCustomDimension": {
+            "description": "Schema for a Google Analytics enhanced e-commerce product impression custom dimension entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "product_impression_custom_dimension",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "productIndex": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "listIndex": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "value": {
+                        "type": "string"
+                    },
+                    "customDimensionIndex": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    }
+                }
+            }
+        },
+        "event": {
+            "description": "Schema for a Google Analytics event hit",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "event",
+                "format": "jsonschema"
+            },
+            "required": [
+                "category",
+                "action"
+            ],
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "category": {
+                    "type": "string",
+                    "maxlength": 150
+                },
+                "action": {
+                    "type": "string",
+                    "maxlength": 500
+                },
+                "value": {
+                    "min": 0,
+                    "type": "integer"
+                },
+                "label": {
+                    "type": "string",
+                    "maxlength": 500
+                }
+            }
+        },
+        "productAction": {
+            "description": "Schema for a Google Analytics enhanced e-commerce product action entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "product_action",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "productAction": {
+                    "type": "string",
+                    "allowed": [
+                        "detail",
+                        "click",
+                        "add",
+                        "remove",
+                        "checkout",
+                        "checkout_option",
+                        "purchase",
+                        "refund",
+                        "null"
+                    ]
+                },
+                "checkoutStepOption": {
+                    "type": "string"
+                },
+                "productActionList": {
+                    "type": "string"
+                },
+                "checkoutStep": {
+                    "type": "integer"
+                }
+            }
+        },
+        "productImpressionList": {
+            "description": "Schema for a Google Analytics enhanced e-commerce product impression list entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "product_impression_list",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "index": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "item": {
+            "description": "Schema for a Google Analytics item hit",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "item",
+                "format": "jsonschema"
+            },
+            "required": [
+                "transactionId",
+                "name"
+            ],
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "category": {
+                    "type": "string",
+                    "maxlength": 500
+                },
+                "code": {
+                    "type": "string",
+                    "maxlength": 500
+                },
+                "name": {
+                    "type": "string",
+                    "maxlength": 500
+                },
+                "price": {
+                    "type": "number"
+                },
+                "transactionId": {
+                    "type": "string",
+                    "maxlength": 500
+                },
+                "currencyCode": {
+                    "type": "string",
+                    "maxlength": 10
+                },
+                "quantity": {
+                    "type": "integer"
+                }
+            }
+        },
+        "trafficSource": {
+            "description": "Schema for a Google Analytics traffic source entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "traffic_source",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "googleAdwordsId": {
+                    "type": "string"
+                },
+                "campaignId": {
+                    "type": "string",
+                    "maxlength": 100
+                },
+                "campaignContent": {
+                    "type": "string",
+                    "maxlength": 500
+                },
+                "campaignSource": {
+                    "type": "string",
+                    "maxlength": 100
+                },
+                "campaignKeyword": {
+                    "type": "string",
+                    "maxlength": 500
+                },
+                "campaignName": {
+                    "type": "string",
+                    "maxlength": 100
+                },
+                "googleDisplayAdsId": {
+                    "type": "string"
+                },
+                "campaignMedium": {
+                    "type": "string",
+                    "maxlength": 50
+                },
+                "documentReferrer": {
+                    "type": "string",
+                    "maxlength": 2048
+                }
+            }
+        },
+        "systemInfo": {
+            "description": "Schema for a Google Analytics system info entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "system_info",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "javaEnabled": {
+                    "type": "boolean"
+                },
+                "screenColors": {
+                    "type": "string",
+                    "maxlength": 20
+                },
+                "flashVersion": {
+                    "type": "string",
+                    "maxlength": 20
+                },
+                "viewportSize": {
+                    "type": "string",
+                    "maxlength": 20
+                },
+                "screenResolution": {
+                    "type": "string",
+                    "maxlength": 20
+                },
+                "userLanguage": {
+                    "type": "string",
+                    "maxlength": 20
+                },
+                "documentEncoding": {
+                    "type": "string",
+                    "maxlength": 20
+                }
+            }
+        },
+        "promotionAction": {
+            "description": "Schema for a Google Analytics enhanced e-commerce promotion action entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "promotion_action",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "promotionAction": {
+                    "type": "string",
+                    "allowed": [
+                        "view",
+                        "promo_click",
+                        "null"
+                    ]
+                }
+            }
+        },
+        "productCustomDimension": {
+            "description": "Schema for a Google Analytics enhanced e-commerce product custom dimension entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "product_custom_dimension",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "productIndex": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "dimensionIndex": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "value": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "customMetric": {
+            "description": "Schema for a Google Analytics custom metric entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "custom_metric",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "index": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "value": {
+                        "type": "number"
+                    }
+                }
+            }
+        },
+        "contentExperiment": {
+            "description": "Schema for a Google Analytics content experiment entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "content_experiment",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "variant": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string",
+                    "maxlength": 40
+                }
+            }
+        },
+        "productImpressionCustomMetric": {
+            "description": "Schema for a Google Analytics enhanced e-commerce product impression custom metric entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "product_impression_custom_metric",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "productIndex": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "listIndex": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "value": {
+                        "type": "integer"
+                    },
+                    "customMetricIndex": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    }
+                }
+            }
+        },
+        "productCustomMetric": {
+            "description": "Schema for a Google Analytics enhanced e-commerce product custom metric entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "product_custom_metric",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "metricIndex": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "productIndex": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "value": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "customDimension": {
+            "description": "Schema for a Google Analytics custom dimension entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "custom_dimension",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "index": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "value": {
+                        "type": "string",
+                        "maxlength": 150
+                    }
+                }
+            }
+        },
+        "product": {
+            "description": "Schema for a Google Analytics enhanced e-commerce product entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "product",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "sku": {
+                        "type": "string",
+                        "maxlength": 500
+                    },
+                    "index": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    },
+                    "name": {
+                        "type": "string",
+                        "maxlength": 500
+                    },
+                    "couponCode": {
+                        "type": "string",
+                        "maxlength": 500
+                    },
+                    "brand": {
+                        "type": "string",
+                        "maxlength": 500
+                    },
+                    "variant": {
+                        "type": "string",
+                        "maxlength": 500
+                    },
+                    "price": {
+                        "type": "number"
+                    },
+                    "position": {
+                        "type": "integer"
+                    },
+                    "category": {
+                        "type": "string",
+                        "maxlength": 500
+                    },
+                    "currencyCode": {
+                        "type": "string"
+                    },
+                    "quantity": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "hit": {
+            "description": "Schema for a Google Analytics hit entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "hit",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "nonInteractionHit": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "string",
+                    "allowed": [
+                        "event",
+                        "exception",
+                        "item",
+                        "pageview",
+                        "screenview",
+                        "social",
+                        "timing",
+                        "transaction"
+                    ]
+                }
+            }
+        },
+        "screenView": {
+            "description": "Schema for a Google Analytics screenview hit",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "screen_view",
+                "format": "jsonschema"
+            },
+            "required": [
+                "screenName"
+            ],
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "screenName": {
+                    "type": "string",
+                    "maxlength": 2048
+                }
+            }
+        },
+        "link": {
+            "description": "Schema for a Google Analytics link entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "link",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            }
+        },
+        "user": {
+            "description": "Schema for a Google Analytics user entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "user",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "string"
+                },
+                "clientId": {
+                    "type": "string"
+                }
+            }
+        },
+        "pageView": {
+            "description": "Schema for a Google Analytics pageview hit",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "page_view",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "documentHostName": {
+                    "type": "string",
+                    "maxlength": 100
+                },
+                "documentLocationUrl": {
+                    "type": "string",
+                    "maxlength": 2048
+                },
+                "documentTitle": {
+                    "type": "string",
+                    "maxlength": 1500
+                },
+                "documentPath": {
+                    "type": "string",
+                    "maxlength": 2048
+                }
+            }
+        },
+        "exception": {
+            "description": "Schema for a Google Analytics exception hit",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "exception",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "isFatal": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "maxlength": 150
+                }
+            }
+        },
+        "transaction": {
+            "description": "Schema for a Google Analytics transaction hit",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "transaction",
+                "format": "jsonschema"
+            },
+            "required": [
+                "id"
+            ],
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "couponCode": {
+                    "type": "string"
+                },
+                "currencyCode": {
+                    "type": "string",
+                    "maxlength": 10
+                },
+                "revenue": {
+                    "type": "number"
+                },
+                "tax": {
+                    "type": "number"
+                },
+                "shipping": {
+                    "type": "number"
+                },
+                "affiliation": {
+                    "type": "string",
+                    "maxlength": 500
+                },
+                "id": {
+                    "type": "string",
+                    "maxlength": 500
+                }
+            }
+        },
+        "contentGroup": {
+            "description": "Schema for a Google Analytics content group entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "content_group",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "index": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 10
+                    },
+                    "value": {
+                        "type": "string",
+                        "maxlength": 100
+                    }
+                }
+            }
+        },
+        "undocumented": {
+            "description": "Schema for a Google Analytics undocumented entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics",
+                "name": "undocumented",
+                "format": "jsonschema"
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "properties": {
+                "a": {
+                    "type": "string",
+                    "maxlength": 256
+                },
+                "jid": {
+                    "type": "string",
+                    "maxlength": 256
+                },
+                "gjid": {
+                    "type": "string",
+                    "maxlength": 256
+                }
+            }
+        },
+        "social": {
+            "description": "Schema for a Google Analytics social hit",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "social",
+                "format": "jsonschema"
+            },
+            "required": [
+                "network",
+                "action"
+            ],
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "action": {
+                    "type": "string",
+                    "maxlength": 50
+                },
+                "network": {
+                    "type": "string",
+                    "maxlength": 50
+                },
+                "actionTarget": {
+                    "type": "string",
+                    "maxlength": 2048
+                }
+            }
+        },
+        "action": {
+            "description": "Schema for a Google Analytics Enhanced Ecommerce action",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.enhanced-ecommerce",
+                "name": "action",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "action": {
+                    "type": "string",
+                    "allowed": [
+                        "click",
+                        "detail",
+                        "add",
+                        "remove",
+                        "checkout",
+                        "checkout_option",
+                        "purchase",
+                        "refund",
+                        "promo_click",
+                        "view"
+                    ]
+                }
+            }
+        },
+        "promotion": {
+            "description": "Schema for a Google Analytics enhanced e-commerce promotion entity",
+            "self": {
+                "version": "1-0-0",
+                "vendor": "com.google.analytics.measurement-protocol",
+                "name": "promotion",
+                "format": "jsonschema"
+            },
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "position": {
+                        "type": "string"
+                    },
+                    "creative": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "index": {
+                        "min": 1,
+                        "type": "integer",
+                        "max": 200
+                    }
+                }
+            }
+        }
+    },
+    "additionalProperties": true
+}

@@ -1,0 +1,85 @@
+[
+    {
+        "test_input": {
+            "header": {
+                "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36"
+            }
+        },
+        "expected_output": [
+            {
+                "header": {
+                    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36"
+                },
+                "device": {
+                    "browser": "Chrome",
+                    "browserSize": null,
+                    "browserVersion": "68.0.3440",
+                    "deviceCategory": "Desktop",
+                    "operatingSystem": "Mac OS X",
+                    "operatingSystemVersion": "10.13.6",
+                    "screenResolution": null
+                }
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "header": {
+                "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 5_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B179 Safari/7534.48.3"
+            }
+        },
+        "expected_output": [
+            {
+                "header": {
+                    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 5_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B179 Safari/7534.48.3"
+                },
+                "device": {
+                    "browser": "Mobile Safari",
+                    "browserSize": null,
+                    "browserVersion": "5.1",
+                    "deviceCategory": "Mobile",
+                    "operatingSystem": "iOS",
+                    "operatingSystemVersion": "5.1",
+                    "screenResolution": null,
+                    "mobileDeviceBranding": "Apple",
+                    "mobileDeviceMarketingName": "iPhone",
+                    "mobileDeviceModel": "iPhone"
+                }
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "header": {
+                "userAgent": "Mozilla/5.0 (Linux; U; Android 4.0.4; en-gb; GT-I9300 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
+            },
+            "systemInfo": {
+                "viewportSize": "1980x1200",
+                "screenResolution": "1980x1200"
+            }
+        },
+        "expected_output": [
+            {
+                "header": {
+                    "userAgent": "Mozilla/5.0 (Linux; U; Android 4.0.4; en-gb; GT-I9300 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
+                },
+                "systemInfo": {
+                    "viewportSize": "1980x1200",
+                    "screenResolution": "1980x1200"
+                },
+                "device": {
+                    "browser": "Android",
+                    "browserSize": "1980x1200",
+                    "browserVersion": "4.0.4",
+                    "deviceCategory": "Mobile",
+                    "operatingSystem": "Android",
+                    "operatingSystemVersion": "4.0.4",
+                    "screenResolution": "1980x1200",
+                    "mobileDeviceBranding": "Samsung",
+                    "mobileDeviceMarketingName": "Samsung GT-I9300",
+                    "mobileDeviceModel": "GT-I9300"
+                }
+            }
+        ]
+    }
+]

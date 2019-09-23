@@ -1,0 +1,8 @@
+{
+    "collector_topic": "projects/rh-mlanalytix/topics/request-logs",
+    "raw_event_model_dataset": "test",
+    "raw_event_model_table_prefix": "raw_event_model_",
+    "enriched_event_model_dataset": "test",
+    "enriched_event_model_table_prefix": "enriched_event_model_",
+    "project_id": "rh-mlanalytix"
+}

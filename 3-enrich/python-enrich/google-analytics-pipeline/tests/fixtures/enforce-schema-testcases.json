@@ -1,0 +1,40 @@
+[
+    {
+        "test_input": {
+            "systemInfo": {
+                "screenResolution": "1980x1200"
+            },
+            "device": {
+                "screenResolution": "1980x1200"
+            }
+        },
+        "expected_output": [
+            {
+                "systemInfo": {
+                    "screenResolution": "1980x1200"
+                }
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "customDimension": [
+                {
+                    "index": 1,
+                    "value": "hello",
+                    "something": "nothing"
+                }
+            ]
+        },
+        "expected_output": [
+            {
+                "customDimension": [
+                    {
+                        "index": 1,
+                        "value": "hello"
+                    }
+                ]
+            }
+        ]
+    }
+]

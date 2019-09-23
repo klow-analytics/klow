@@ -1,0 +1,130 @@
+[
+    {
+        "test_input": {
+            "general": {
+                "protocolVersion": "1"
+            },
+            "hit": {
+                "type": "pageview"
+            },
+            "pageView": {
+                "documentLocationUrl": "https://rajeshhegde.com/"
+            },
+            "systemInfo": {
+                "screenResolution": "1280x800"
+            },
+            "user": {
+                "clientId": "2116087101.1537271352"
+            }
+        },
+        "expected_output": [
+            {
+                "general": {
+                    "protocolVersion": "1"
+                },
+                "hit": {
+                    "type": "pageview"
+                },
+                "pageView": {
+                    "documentLocationUrl": "https://rajeshhegde.com/"
+                },
+                "systemInfo": {
+                    "screenResolution": "1280x800"
+                },
+                "user": {
+                    "clientId": "2116087101.1537271352"
+                }
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "product": [
+                {
+                    "index": "1",
+                    "sku": "P12345",
+                    "name": "Android%20T-Shirt",
+                    "brand": "Google",
+                    "category": "Apparel%2FMens%2FT-Shirts",
+                    "variant": "Black",
+                    "price": "29.20",
+                    "quantity": "2",
+                    "couponCode": "SUMMER_SALE13"
+                }
+            ]
+        },
+        "expected_output": [
+            {
+                "product": [
+                    {
+                        "index": 1,
+                        "sku": "P12345",
+                        "name": "Android T-Shirt",
+                        "brand": "Google",
+                        "category": "Apparel/Mens/T-Shirts",
+                        "variant": "Black",
+                        "price": 29.20,
+                        "quantity": 2,
+                        "couponCode": "SUMMER_SALE13"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "product": [
+                {
+                    "index": "1",
+                    "sku": "P12345",
+                    "name": "Android%20T-Shirt",
+                    "brand": "Google",
+                    "category": "Apparel%2FMens%2FT-Shirts",
+                    "variant": "Black",
+                    "price": "29.20",
+                    "quantity": "2",
+                    "couponCode": "SUMMER_SALE13"
+                },
+                {
+                    "index": "2",
+                    "sku": "P12346",
+                    "name": "Android%20T-Shirt",
+                    "brand": "Google",
+                    "category": "Apparel%2FMens%2FT-Shirts",
+                    "variant": "Black",
+                    "price": "40.0",
+                    "quantity": "1",
+                    "couponCode": "SUMMER_SALE13"
+                }
+            ]
+        },
+        "expected_output": [
+            {
+                "product": [
+                    {
+                        "index": 1,
+                        "sku": "P12345",
+                        "name": "Android T-Shirt",
+                        "brand": "Google",
+                        "category": "Apparel/Mens/T-Shirts",
+                        "variant": "Black",
+                        "price": 29.20,
+                        "quantity": 2,
+                        "couponCode": "SUMMER_SALE13"
+                    },
+                    {
+                        "index": 2,
+                        "sku": "P12346",
+                        "name": "Android T-Shirt",
+                        "brand": "Google",
+                        "category": "Apparel/Mens/T-Shirts",
+                        "variant": "Black",
+                        "price": 40.0,
+                        "quantity": 1,
+                        "couponCode": "SUMMER_SALE13"
+                    }
+                ]
+            }
+        ]
+    }
+]

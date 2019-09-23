@@ -1,0 +1,631 @@
+{
+    "simple_fields": {
+        "collector_tstamp": {
+            "field_group": "collector",
+            "field_name": "collectorTimestamp"
+        },
+        "request_url": {
+            "field_group": "collector",
+            "field_name": "requestUrl"
+        },
+        "nuid": {
+            "field_group": "collector",
+            "field_name": "networkUserId"
+        },
+        "v_collector": {
+            "field_group": "collector",
+            "field_name": "version"
+        },
+        "x-appengine-user-ip": {
+            "field_group": "header",
+            "field_name": "userIpAddress"
+        },
+        "user-agent": {
+            "field_group": "header",
+            "field_name": "userAgent"
+        },
+        "x-appengine-citylatlong": {
+            "field_group": "header",
+            "field_name": "appEngineCityLatLong"
+        },
+        "x-appengine-region": {
+            "field_group": "header",
+            "field_name": "appEngineRegion"
+        },
+        "x-appengine-city": {
+            "field_group": "header",
+            "field_name": "appEngineCity"
+        },
+        "x-appengine-country": {
+            "field_group": "header",
+            "field_name": "appEngineCountry"
+        },
+        "referrer": {
+            "field_group": "header",
+            "field_name": "referer"
+        },
+        "a": {
+            "field_group": "undocumented",
+            "field_name": "a"
+        },
+        "jid": {
+            "field_group": "undocumented",
+            "field_name": "jid"
+        },
+        "gjid": {
+            "field_group": "undocumented",
+            "field_name": "gjid"
+        },
+        "_v": {
+            "field_group": "private",
+            "field_name": "v"
+        },
+        "_s": {
+            "field_group": "private",
+            "field_name": "s"
+        },
+        "_u": {
+            "field_group": "private",
+            "field_name": "u"
+        },
+        "_gid": {
+            "field_group": "private",
+            "field_name": "gid"
+        },
+        "_r": {
+            "field_group": "private",
+            "field_name": "r"
+        },
+        "v": {
+            "field_group": "general",
+            "field_name": "protocolVersion"
+        },
+        "tid": {
+            "field_group": "general",
+            "field_name": "trackingId"
+        },
+        "aip": {
+            "field_group": "general",
+            "field_name": "anonymizeIp"
+        },
+        "ds": {
+            "field_group": "general",
+            "field_name": "dataSource"
+        },
+        "qt": {
+            "field_group": "general",
+            "field_name": "queueTime"
+        },
+        "z": {
+            "field_group": "general",
+            "field_name": "cacheBuster"
+        },
+        "cid": {
+            "field_group": "user",
+            "field_name": "clientId"
+        },
+        "uid": {
+            "field_group": "user",
+            "field_name": "userId"
+        },
+        "sc": {
+            "field_group": "session",
+            "field_name": "sessionControl"
+        },
+        "uip": {
+            "field_group": "session",
+            "field_name": "ipOverride"
+        },
+        "ua": {
+            "field_group": "session",
+            "field_name": "userAgentOverride"
+        },
+        "geoid": {
+            "field_group": "session",
+            "field_name": "geographicalOverride"
+        },
+        "dr": {
+            "field_group": "trafficSource",
+            "field_name": "documentReferrer"
+        },
+        "cn": {
+            "field_group": "trafficSource",
+            "field_name": "campaignName"
+        },
+        "cs": {
+            "field_group": "trafficSource",
+            "field_name": "campaignSource"
+        },
+        "cm": {
+            "field_group": "trafficSource",
+            "field_name": "campaignMedium"
+        },
+        "ck": {
+            "field_group": "trafficSource",
+            "field_name": "campaignKeyword"
+        },
+        "cc": {
+            "field_group": "trafficSource",
+            "field_name": "campaignContent"
+        },
+        "ci": {
+            "field_group": "trafficSource",
+            "field_name": "campaignId"
+        },
+        "gclid": {
+            "field_group": "trafficSource",
+            "field_name": "googleAdwordsId"
+        },
+        "dclid": {
+            "field_group": "trafficSource",
+            "field_name": "googleDisplayAdsId"
+        },
+        "sr": {
+            "field_group": "systemInfo",
+            "field_name": "screenResolution"
+        },
+        "vp": {
+            "field_group": "systemInfo",
+            "field_name": "viewportSize"
+        },
+        "de": {
+            "field_group": "systemInfo",
+            "field_name": "documentEncoding"
+        },
+        "sd": {
+            "field_group": "systemInfo",
+            "field_name": "screenColors"
+        },
+        "ul": {
+            "field_group": "systemInfo",
+            "field_name": "userLanguage"
+        },
+        "je": {
+            "field_group": "systemInfo",
+            "field_name": "javaEnabled"
+        },
+        "fl": {
+            "field_group": "systemInfo",
+            "field_name": "flashVersion"
+        },
+        "t": {
+            "field_group": "hit",
+            "field_name": "type"
+        },
+        "ni": {
+            "field_group": "hit",
+            "field_name": "nonInteractionHit"
+        },
+        "dl": {
+            "field_group": "pageView",
+            "field_name": "documentLocationUrl"
+        },
+        "dh": {
+            "field_group": "pageView",
+            "field_name": "documentHostName"
+        },
+        "dp": {
+            "field_group": "pageView",
+            "field_name": "documentPath"
+        },
+        "dt": {
+            "field_group": "pageView",
+            "field_name": "documentTitle"
+        },
+        "cd": {
+            "field_group": "screenView",
+            "field_name": "screenName"
+        },
+        "linkid": {
+            "field_group": "link",
+            "field_name": "id"
+        },
+        "an": {
+            "field_group": "app",
+            "field_name": "name"
+        },
+        "aid": {
+            "field_group": "app",
+            "field_name": "id"
+        },
+        "av": {
+            "field_group": "app",
+            "field_name": "version"
+        },
+        "aiid": {
+            "field_group": "app",
+            "field_name": "installerId"
+        },
+        "ec": {
+            "field_group": "event",
+            "field_name": "category"
+        },
+        "ea": {
+            "field_group": "event",
+            "field_name": "action"
+        },
+        "el": {
+            "field_group": "event",
+            "field_name": "label"
+        },
+        "ev": {
+            "field_group": "event",
+            "field_name": "value"
+        },
+        "ta": {
+            "field_group": "transaction",
+            "field_name": "affiliation"
+        },
+        "tr": {
+            "field_group": "transaction",
+            "field_name": "revenue"
+        },
+        "ts": {
+            "field_group": "transaction",
+            "field_name": "shipping"
+        },
+        "tt": {
+            "field_group": "transaction",
+            "field_name": "tax"
+        },
+        "in": {
+            "field_group": "item",
+            "field_name": "name"
+        },
+        "ip": {
+            "field_group": "item",
+            "field_name": "price"
+        },
+        "iq": {
+            "field_group": "item",
+            "field_name": "quantity"
+        },
+        "ic": {
+            "field_group": "item",
+            "field_name": "code"
+        },
+        "iv": {
+            "field_group": "item",
+            "field_name": "category"
+        },
+        "tcc": {
+            "field_group": "transaction",
+            "field_name": "couponCode"
+        },
+        "pa": {
+            "field_group": "productAction",
+            "field_name": "productAction"
+        },
+        "pal": {
+            "field_group": "productAction",
+            "field_name": "productActionList"
+        },
+        "cos": {
+            "field_group": "productAction",
+            "field_name": "checkoutStep"
+        },
+        "col": {
+            "field_group": "productAction",
+            "field_name": "checkoutStepOption"
+        },
+        "promoa": {
+            "field_group": "promotionAction",
+            "field_name": "promotionAction"
+        },
+        "sn": {
+            "field_group": "social",
+            "field_name": "network"
+        },
+        "sa": {
+            "field_group": "social",
+            "field_name": "action"
+        },
+        "st": {
+            "field_group": "social",
+            "field_name": "actionTarget"
+        },
+        "utc": {
+            "field_group": "timing",
+            "field_name": "userTimingCategory"
+        },
+        "utv": {
+            "field_group": "timing",
+            "field_name": "userTimingVariableName"
+        },
+        "utt": {
+            "field_group": "timing",
+            "field_name": "userTimingTime"
+        },
+        "utl": {
+            "field_group": "timing",
+            "field_name": "userTimingLabel"
+        },
+        "plt": {
+            "field_group": "timing",
+            "field_name": "pageLoadTime"
+        },
+        "dns": {
+            "field_group": "timing",
+            "field_name": "dnsTime"
+        },
+        "pdt": {
+            "field_group": "timing",
+            "field_name": "pageDownloadTime"
+        },
+        "rrt": {
+            "field_group": "timing",
+            "field_name": "redirectResponseTime"
+        },
+        "tcp": {
+            "field_group": "timing",
+            "field_name": "tcpConnectTime"
+        },
+        "srt": {
+            "field_group": "timing",
+            "field_name": "serverResponseTime"
+        },
+        "dit": {
+            "field_group": "timing",
+            "field_name": "domInteractiveTime"
+        },
+        "clt": {
+            "field_group": "timing",
+            "field_name": "contentLoadTime"
+        },
+        "exd": {
+            "field_group": "exception",
+            "field_name": "description"
+        },
+        "exf": {
+            "field_group": "exception",
+            "field_name": "isFatal"
+        },
+        "xid": {
+            "field_group": "contentExperiment",
+            "field_name": "id"
+        },
+        "xvar": {
+            "field_group": "contentExperiment",
+            "field_name": "variant"
+        }
+    },
+    "indexed_fields": {
+        "cg(\\d+)": {
+            "field_group": "contentGroup",
+            "field_name": "value",
+            "follow_index": false,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "pr(\\d+)id": {
+            "field_group": "product",
+            "field_name": "sku",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "pr(\\d+)nm": {
+            "field_group": "product",
+            "field_name": "name",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "pr(\\d+)br": {
+            "field_group": "product",
+            "field_name": "brand",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "pr(\\d+)ca": {
+            "field_group": "product",
+            "field_name": "category",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "pr(\\d+)va": {
+            "field_group": "product",
+            "field_name": "variant",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "pr(\\d+)pr": {
+            "field_group": "product",
+            "field_name": "price",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "pr(\\d+)qt": {
+            "field_group": "product",
+            "field_name": "quantity",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "pr(\\d+)cc": {
+            "field_group": "product",
+            "field_name": "couponCode",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "pr(\\d+)ps": {
+            "field_group": "product",
+            "field_name": "position",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "pr(\\d+)cd(\\d)": {
+            "field_group": "productCustomDimension",
+            "field_name": "value",
+            "follow_index": false,
+            "match_groups": [
+                "productIndex",
+                "dimensionIndex"
+            ]
+        },
+        "pr(\\d+)cm(\\d)": {
+            "field_group": "productCustomMetric",
+            "field_name": "value",
+            "follow_index": false,
+            "match_groups": [
+                "productIndex",
+                "metricIndex"
+            ]
+        },
+        "il(\\d+)nm": {
+            "field_group": "productImpressionList",
+            "field_name": "name",
+            "follow_index": false,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "il(\\d+)pi(\\d+)id": {
+            "field_group": "productImpression",
+            "field_name": "sku",
+            "follow_index": true,
+            "match_groups": [
+                "listIndex",
+                "productIndex"
+            ]
+        },
+        "il(\\d+)pi(\\d+)nm": {
+            "field_group": "productImpression",
+            "field_name": "name",
+            "follow_index": true,
+            "match_groups": [
+                "listIndex",
+                "productIndex"
+            ]
+        },
+        "il(\\d+)pi(\\d+)br": {
+            "field_group": "productImpression",
+            "field_name": "brand",
+            "follow_index": true,
+            "match_groups": [
+                "listIndex",
+                "productIndex"
+            ]
+        },
+        "il(\\d+)pi(\\d+)ca": {
+            "field_group": "productImpression",
+            "field_name": "category",
+            "follow_index": true,
+            "match_groups": [
+                "listIndex",
+                "productIndex"
+            ]
+        },
+        "il(\\d+)pi(\\d+)va": {
+            "field_group": "productImpression",
+            "field_name": "variant",
+            "follow_index": true,
+            "match_groups": [
+                "listIndex",
+                "productIndex"
+            ]
+        },
+        "il(\\d+)pi(\\d+)ps": {
+            "field_group": "productImpression",
+            "field_name": "position",
+            "follow_index": true,
+            "match_groups": [
+                "listIndex",
+                "productIndex"
+            ]
+        },
+        "il(\\d+)pi(\\d+)pr": {
+            "field_group": "productImpression",
+            "field_name": "price",
+            "follow_index": true,
+            "match_groups": [
+                "listIndex",
+                "productIndex"
+            ]
+        },
+        "il(\\d+)pi(\\d+)cd(\\d+)": {
+            "field_group": "productImpressionCustomDimension",
+            "field_name": "value",
+            "follow_index": false,
+            "match_groups": [
+                "listIndex",
+                "productIndex",
+                "customDimensionIndex"
+            ]
+        },
+        "il(\\d+)pi(\\d+)cm(\\d+)": {
+            "field_group": "productImpressionCustomMetric",
+            "field_name": "value",
+            "follow_index": false,
+            "match_groups": [
+                "listIndex",
+                "productIndex",
+                "customMetricIndex"
+            ]
+        },
+        "promo(\\d+)id": {
+            "field_group": "promotion",
+            "field_name": "id",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "promo(\\d+)nm": {
+            "field_group": "promotion",
+            "field_name": "name",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "promo(\\d+)cr": {
+            "field_group": "promotion",
+            "field_name": "creative",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "promo(\\d+)ps": {
+            "field_group": "promotion",
+            "field_name": "position",
+            "follow_index": true,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "cd(\\d+)": {
+            "field_group": "customDimension",
+            "field_name": "value",
+            "follow_index": false,
+            "match_groups": [
+                "index"
+            ]
+        },
+        "cm(\\d+)": {
+            "field_group": "customMetric",
+            "field_name": "value",
+            "follow_index": false,
+            "match_groups": [
+                "index"
+            ]
+        }
+    }
+}

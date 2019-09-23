@@ -1,0 +1,67 @@
+[
+    {
+        "test_input": {
+            "pageView": {
+                "documentLocationUrl": "https://rajeshhegde.com/about?hello=world&a=b#fragment"
+            },
+            "trafficSource": {
+                "documentReferrer": "https://www.google.com"
+            }
+        },
+        "expected_output": [
+            {
+                "pageView": {
+                    "documentLocationUrl": "https://rajeshhegde.com/about?hello=world&a=b#fragment"
+                },
+                "trafficSource": {
+                    "documentReferrer": "https://www.google.com"
+                },
+                "referrer": {
+                    "hostname": "www.google.com",
+                    "path": "/",
+                    "fragment": "",
+                    "queryParams": [],
+                    "source": "Google",
+                    "medium": "search",
+                    "searchParameter": null,
+                    "searchTerm": null
+                }
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "pageView": {
+                "documentLocationUrl": "https://rajeshhegde.com/about?hello=world&a=b#fragment"
+            },
+            "header": {
+                "referrer": "http://www.google.com/search?q=rajesh+hegde"
+            }
+        },
+        "expected_output": [
+            {
+                "pageView": {
+                    "documentLocationUrl": "https://rajeshhegde.com/about?hello=world&a=b#fragment"
+                },
+                "header": {
+                    "referrer": "http://www.google.com/search?q=rajesh+hegde"
+                },
+                "referrer": {
+                    "hostname": "www.google.com",
+                    "path": "/search",
+                    "fragment": "",
+                    "queryParams": [
+                        {
+                            "name": "q",
+                            "value": "rajesh hegde"
+                        }
+                    ],
+                    "source": "Google",
+                    "medium": "search",
+                    "searchParameter": "q",
+                    "searchTerm": "rajesh hegde"
+                }
+            }
+        ]
+    }
+]

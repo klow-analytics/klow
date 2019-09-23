@@ -1,0 +1,122 @@
+[
+    {
+        "test_input": {
+            "v": "1",
+            "t": "pageview",
+            "dl": "https://rajeshhegde.com/",
+            "sr": "1280x800",
+            "cid": "2116087101.1537271352"
+        },
+        "expected_output": [
+            {
+                "general": {
+                    "protocolVersion": "1"
+                },
+                "hit": {
+                    "type": "pageview"
+                },
+                "pageView": {
+                    "documentLocationUrl": "https://rajeshhegde.com/"
+                },
+                "systemInfo": {
+                    "screenResolution": "1280x800"
+                },
+                "user": {
+                    "clientId": "2116087101.1537271352"
+                }
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "cd1": "Sports"
+        },
+        "expected_output": [
+            {
+                "customDimension": [
+                    {
+                        "index": "1",
+                        "value": "Sports"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "pr1id": "P12345",
+            "pr1nm": "Android%20T-Shirt",
+            "pr1br": "Google",
+            "pr1ca": "Apparel%2FMens%2FT-Shirts",
+            "pr1va": "Black",
+            "pr1pr": "29.20",
+            "pr1qt": "2",
+            "pr1cc": "SUMMER_SALE13"
+        },
+        "expected_output": [
+            {
+                "product": [
+                    {
+                        "index": "1",
+                        "sku": "P12345",
+                        "name": "Android%20T-Shirt",
+                        "brand": "Google",
+                        "category": "Apparel%2FMens%2FT-Shirts",
+                        "variant": "Black",
+                        "price": "29.20",
+                        "quantity": "2",
+                        "couponCode": "SUMMER_SALE13"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "test_input": {
+            "pr1id": "P12345",
+            "pr1nm": "Android%20T-Shirt",
+            "pr1br": "Google",
+            "pr1ca": "Apparel%2FMens%2FT-Shirts",
+            "pr1va": "Black",
+            "pr1pr": "29.20",
+            "pr1qt": "2",
+            "pr1cc": "SUMMER_SALE13",
+            "pr2id": "P12346",
+            "pr2nm": "Android%20T-Shirt",
+            "pr2br": "Google",
+            "pr2ca": "Apparel%2FMens%2FT-Shirts",
+            "pr2va": "Black",
+            "pr2pr": "40.0",
+            "pr2qt": "1",
+            "pr2cc": "SUMMER_SALE13"
+        },
+        "expected_output": [
+            {
+                "product": [
+                    {
+                        "index": "1",
+                        "sku": "P12345",
+                        "name": "Android%20T-Shirt",
+                        "brand": "Google",
+                        "category": "Apparel%2FMens%2FT-Shirts",
+                        "variant": "Black",
+                        "price": "29.20",
+                        "quantity": "2",
+                        "couponCode": "SUMMER_SALE13"
+                    },
+                    {
+                        "index": "2",
+                        "sku": "P12346",
+                        "name": "Android%20T-Shirt",
+                        "brand": "Google",
+                        "category": "Apparel%2FMens%2FT-Shirts",
+                        "variant": "Black",
+                        "price": "40.0",
+                        "quantity": "1",
+                        "couponCode": "SUMMER_SALE13"
+                    }
+                ]
+            }
+        ]
+    }
+]

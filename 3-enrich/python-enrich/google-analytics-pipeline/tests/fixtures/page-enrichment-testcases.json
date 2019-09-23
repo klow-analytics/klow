@@ -1,0 +1,35 @@
+[
+    {
+        "test_input": {
+            "pageView": {
+                "documentLocationUrl": "https://rajeshhegde.com/about?hello=world&a=b#fragment",
+                "documentTitle": "Rajesh Hegde's Professional Portfolio Website"
+            }
+        },
+        "expected_output": [
+            {
+                "pageView": {
+                    "documentLocationUrl": "https://rajeshhegde.com/about?hello=world&a=b#fragment",
+                    "documentTitle": "Rajesh Hegde's Professional Portfolio Website"
+                },
+                "page": {
+                    "title": "Rajesh Hegde's Professional Portfolio Website",
+                    "hostname": "rajeshhegde.com",
+                    "path": "/about",
+                    "pathLevel1": "about",
+                    "fragment": "fragment",
+                    "queryParams": [
+                        {
+                            "name": "a",
+                            "value": "b"
+                        },
+                        {
+                            "name": "hello",
+                            "value": "world"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]
